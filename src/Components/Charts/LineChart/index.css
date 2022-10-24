@@ -1,0 +1,54 @@
+.lineChart {
+    width: 100%;
+    height: auto;
+}
+
+.lineHeader, .lineSubHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.lineHeader h1, .lineSubHeader h1 {
+    font-size: 1.5em;
+    line-height: 0;
+}
+
+.lineHeader {
+    padding-bottom: 2em;
+    border-bottom: 2px dashed rgba(85, 80, 80, 0.137);
+}
+
+.lineHeader a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .95em;
+}
+
+.lineSubHeader .diffPercent {
+    background: rgba(163, 252, 141, 0.274);
+    color: rgb(21, 104, 0);
+    font-weight: 600;
+    padding: 2px 5px;
+}
+
+.lineSubHeader .decrease {
+    background: rgba(252, 141, 141, 0.274);
+    color: rgb(104, 0, 0);
+}
+
+.avgSales {
+    float: left;
+    padding-left: 10px;
+}
+
+.avgSales p {
+    margin: 0;
+    color:rgba(100, 100, 100, 0.808);
+    font-weight: bold;
+}
+
+/*
+    faltan Media Queries, no es de prioridad por el momento
+*/

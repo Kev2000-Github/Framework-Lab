@@ -1,21 +1,17 @@
 import './App.css';
+import {LineChart} from '../Components/Charts'
+import {dataProjection, dataReal, labels as saleYears} from '../Data/lineChartSales'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <LineChart 
+          dataProjection={dataProjection}
+          dataReal={dataReal}
+          years={saleYears}
+        />
+      </main>
     </div>
   );
 }
