@@ -1,4 +1,5 @@
 import {LineChart} from './LineChart'
+import {BarChart} from './BarChart'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -8,7 +9,8 @@ import {
     Title,
     Tooltip,
     Legend,
-    Filler
+    Filler,
+    BarElement
   } from 'chart.js';
 
 ChartJS.register(
@@ -16,12 +18,14 @@ ChartJS.register(
     LinearScale,
     PointElement,
     LineElement,
+    BarElement,
     Title,
     Tooltip,
     Legend,
-    Filler
+    Filler,
   );
 
 export {
-    LineChart
+    LineChart,
+    BarChart
 }
