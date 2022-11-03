@@ -1,4 +1,5 @@
 import './Barra.css';
+import { useState } from 'react';
 import {
   House,
   Grafica,
@@ -10,6 +11,7 @@ import {
   Principal,
   FotoPerfil,
 } from '../SVG/IconNavbar';
+import { ArrowDown } from '../SVG/ArrowDown';
 
 function Perfil() {
   return (
@@ -26,6 +28,11 @@ function Perfil() {
 }
 
 function Lista() {
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const subMenuOnClick = () => {
+    setIsSubMenuOpen(!isSubMenuOpen);
+  };
+
   return (
     <div className='listado'>
       <Perfil />
@@ -71,13 +78,14 @@ function Lista() {
           </a>
         </li>
         <li className='item' id='Documents'>
-          <a href='#Documents' className='btn'>
+          <a href='#' className='btn submenu' onClick={subMenuOnClick}>
             <div className='icono'>
               <Documento />
             </div>
             Documents
+            <ArrowDown className='arrowDown' />
           </a>
-          <div className='smenu'>
+          <div className={`smenu ${isSubMenuOpen ? 'open' : ''}`}>
             <a href='#'>Invoices</a>
             <a href='#'>Extracts</a>
             <a href='#'>Handbils</a>
