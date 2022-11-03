@@ -1,50 +1,36 @@
-import React, {Component} from 'react';
 import {Doughnut} from 'react-chartjs-2';
-import './LineChart/index.css';
-var oilCanvas = document.getElementById("oilChart");
 
-Chart.defaults.global.defaultFontFamily = "Lato";
-Chart.defaults.global.defaultFontSize = 18;
-export const doughnutChart = ({})=>{
-    var oilData = {
-    labels: [
-        "Youtube",
-        "Facebook",
-        "Instagram",
-        "TikTok",
-        "Twitter"
-    ],
-    datasets: [
-        {
-            data: [92, 92, 88, 86, 84],
-            backgroundColor: [
-                "#FF6384",
-                "#63FF84",
-                "#84FF63",
-                "#8463FF",
-                "#6384FF"
-            ],
-            borderColor: "black",
-            borderWidth: 2
-        }]
+const oilData = {
+  labels: [
+      "Youtube",
+      "Facebook",
+      "Instagram",
+      "TikTok",
+      "Twitter"
+  ],
+  datasets: [
+      {
+          data: [92, 92, 88, 86, 84],
+          backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)"
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
+          ],
+          borderWidth: 1
+      }]
 };
 
-var chartOptions = {
-  rotation: -Math.PI,
-  cutoutPercentage: 30,
-  circumference: Math.PI,
-  legend: {
-    position: 'left'
-  },
-  animation: {
-    animateRotate: false,
-    animateScale: true
-  }
-};
-
-var doughnutChart = new Chart(oilCanvas, {
-  type: 'doughnut',
-  data: oilData,
-  options: chartOptions
-});
+export const DoughnutChart = ()=>{
+  return (
+    <Doughnut data={oilData} />
+  )
 }

@@ -8,7 +8,8 @@ import {
     Title,
     Tooltip,
     Legend,
-    Filler
+    Filler,
+    ArcElement
   } from 'chart.js';
 
 ChartJS.register(
@@ -16,6 +17,7 @@ ChartJS.register(
     LinearScale,
     PointElement,
     LineElement,
+    ArcElement,
     Title,
     Tooltip,
     Legend,

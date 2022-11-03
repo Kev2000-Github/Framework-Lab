@@ -1,14 +1,13 @@
 import './App.css';
 import {LineChart} from '../Components/Charts'
-import {Donut} from '../Components/Charts'
 import {dataProjection, dataReal, labels as saleYears} from '../Data/lineChartSales'
-
+import {DoughnutChart} from '../Components/Charts/Donut'
 function App() {
   return (
     <div className="App">
       <main >
         <div>
-        <doughnutChart/>
+        <DoughnutChart/>
         </div>
         <div>
         <LineChart 
