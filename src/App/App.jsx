@@ -1,21 +1,29 @@
-import "./App.css";
-import { LineChart, BarChart } from "../Components/Charts";
+import './App.css';
+import {
+  LineChart,
+  BarChart,
+} from '../Components/Charts';
 import {
   dataProjection,
   dataReal,
   labels as saleYears,
-} from "../Data/lineChartSales";
-import { app, goals, web, labels as leadYears } from "../Data/BarChartData"
-import { Table } from "../Components/Table";
-import {Lista} from '../Components/Navbar/BarraLateral.jsx';
+} from '../Data/lineChartSales';
+import {
+  app,
+  goals,
+  web,
+  labels as leadYears,
+} from '../Data/BarChartData';
+import { Table } from '../Components/Table';
+import { Lista } from '../Components/Navbar/BarraLateral.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <main>
-        <div className="grid grid-col-1 gap-2">
+        <div className='grid grid-col-1 gap-2'>
           <div>
-            <Lista/>
+            <Lista />
             <LineChart
               dataProjection={dataProjection}
               dataReal={dataReal}
