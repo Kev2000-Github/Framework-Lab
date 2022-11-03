@@ -1,10 +1,11 @@
 import "./App.css";
-import { LineChart } from "../Components/Charts";
+import { LineChart, BarChart } from "../Components/Charts";
 import {
   dataProjection,
   dataReal,
   labels as saleYears,
 } from "../Data/lineChartSales";
+import { app, goals, web, labels as leadYears } from "../Data/BarChartData"
 import { Table } from "../Components/Table";
 import {Lista} from '../Components/Navbar/BarraLateral.jsx';
 
@@ -19,6 +20,12 @@ function App() {
               dataProjection={dataProjection}
               dataReal={dataReal}
               years={saleYears}
+            />
+            <BarChart
+              app={app}
+              goals={goals}
+              web={web}
+              years={leadYears}
             />
           </div>
           <div>
