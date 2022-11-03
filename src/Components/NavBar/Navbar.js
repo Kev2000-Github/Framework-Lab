@@ -1,13 +1,14 @@
 import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "../../Styles/main.css";
 import "./Navbar.css"
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { 
+	Notification, 
+	SearchIcon, 
+	AppsIcon, 
+	BurgerMenu, 
+	Close } from '../SVG'
 
-
-function Navbar() {
+export const NavBar = () => {
 	const navRef = useRef();
 
 	const showNavbar = () => {
@@ -25,7 +26,7 @@ function Navbar() {
             <input className="search-txt" type="text" name="" placeholder="Search for data, users, doc"/>
 			
             <a className="search-btn" href="#">
-                <i className="fas fa-search"></i>
+                <SearchIcon/>
 				
             </a>
         </div>
@@ -37,19 +38,21 @@ function Navbar() {
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
-					<FaTimes />
+					<Close className="closeMenu"/>
 				</button>
 			</nav>
-			<div> <i className="fa-sharp fa-solid fa-bell"></i></div>
-			<div> <i className="fa-solid fa-border-all"></i></div>
+			<div> 
+				<Notification className="notification"/>
+			</div>
+			<div>
+				<AppsIcon className="appsIcon"/>
+			</div>
 			
 			<button className="nav-btn" onClick={showNavbar}>
-				<FaBars />
+				<BurgerMenu className="burgerMenu"/>
 			</button>
 			
 		</header>
 		
 	);
 }
-
-export default Navbar;

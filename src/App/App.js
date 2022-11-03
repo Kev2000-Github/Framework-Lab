@@ -1,6 +1,6 @@
 import './App.css';
 import {LineChart} from '../Components/Charts'
-import NavBar from '../Components/NavBar/Navbar'
+import {NavBar} from '../Components/NavBar/Navbar'
 import React from 'react'
 import {
   dataProjection,

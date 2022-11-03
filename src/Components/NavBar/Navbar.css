@@ -43,3 +43,17 @@
 .search-btn svg{
     fill:#b10a0a;
 }
+
+.burgerMenu, .closeMenu{
+    width: 30px;
+    height: auto;
+}
+
+.appsIcon{
+    width: 20px;
+    height: auto;
+}
+.notification{
+    width: 25px;
+    height: auto;
+}
