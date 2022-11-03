@@ -6,6 +6,7 @@ import {
   labels as saleYears,
 } from "../Data/lineChartSales";
 import { Table } from "../Components/Table";
+import {Lista} from '../Components/Navbar/BarraLateral.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <div className="grid grid-col-1 gap-2">
           <div>
+            <Lista/>
             <LineChart
               dataProjection={dataProjection}
               dataReal={dataReal}
