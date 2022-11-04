@@ -15,7 +15,7 @@ import {
   labels as leadYears,
 } from '../Data/BarChartData';
 import { Table } from '../Components/Table';
-import { Lista } from '../Components/Navbar/BarraLateral.jsx';
+import { Lista } from '../Components/Menu/BarraLateral';
 
 function App() {
   return (
