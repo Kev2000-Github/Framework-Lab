@@ -9,6 +9,7 @@ import {
   Legend,
   Filler,
   BarElement,
+  ArcElement,
 } from 'chart.js';
 import { LineChart } from './LineChart';
 import { BarChart } from './BarChart';
@@ -19,6 +20,7 @@ ChartJS.register(
   PointElement,
   LineElement,
   BarElement,
+  ArcElement,
   Title,
   Tooltip,
   Legend,

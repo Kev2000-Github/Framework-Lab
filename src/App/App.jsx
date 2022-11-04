@@ -1,4 +1,5 @@
 import './App.css';
+import { Button } from 'flowbite-react';
 import {
   LineChart,
   BarChart,
@@ -17,6 +18,7 @@ import {
 import { Table } from '../Components/Table';
 import { Lista } from '../Components/Menu/BarraLateral';
 import { NavBar } from '../Components/NavBar/Navbar';
+import { DoughnutChart } from '../Components/Charts/Donut';
 
 function App() {
   return (
@@ -25,9 +27,14 @@ function App() {
       <main className='mainPage'>
         <Lista className='sideMenu' />
         <div className='dashboard'>
-          <h1>
-            Analíticas
-          </h1>
+          <div className='head'>
+            <h1>
+              Analíticas
+            </h1>
+            <Button className='btn-cvs' color='dark'>
+              Exportar como CVS
+            </Button>
+          </div>
           <div className='charts'>
             <LineChart
               dataProjection={dataProjection}
@@ -42,6 +49,7 @@ function App() {
               years={leadYears}
               className='barChart box'
             />
+            <DoughnutChart className='box' />
           </div>
           <Table className='table box' />
         </div>
