@@ -1,4 +1,4 @@
-import { Bar } from "react-chartjs-2";
+import { Bar } from 'react-chartjs-2';
 
 const options = {
   responsive: true,
@@ -9,8 +9,8 @@ const options = {
       max: 1000,
       stacked: false,
       grid: {
-        display: false
-      }
+        display: false,
+      },
     },
     x: {
       stacked: true,
@@ -18,8 +18,8 @@ const options = {
         beginAtZero: true,
       },
       grid: {
-        display: false
-      }
+        display: false,
+      },
     },
   },
 
@@ -29,7 +29,7 @@ const options = {
     },
     title: {
       display: true,
-      text: "Leads",
+      text: 'Leads',
       font: {
         size: 16,
       },
@@ -37,42 +37,46 @@ const options = {
   },
 };
 
-export const BarChart = ({app, goals, web, years}) => {
-  return  <Bar 
-            options={options}
-            data={{
-              datasets: [
-                {
-                  label: "Goal",
-                  data: goals,
-                  borderColor: "rgb(0,0,0, 0.8)",
-                  backgroundColor: "rgb(207,203,203, 0.3)",
-                  pointRadius: 6,
-                  borderWidth: {
-                    left: 0,
-                    right: 0,
-                    top: 4,
-                    bottom: 0,
-                  }
-                },
-                {
-                  label: "Web",
-                  data: app,
-                  backgroundColor: "rgb( 0 , 0 , 255, 0.3 )",
-                  borderColor: "rgb( 0 , 0 , 255, 0.7)",
-                  borderWidth: 3,
-                  pointRadius: 6,
-                },
-                {
-                  label: "App",
-                  data: web,
-                  backgroundColor: "rgb( 185 , 0 , 255, 0.3 )",
-                  borderColor: "rgb( 185 , 0 , 255, 0.7)",
-                  borderWidth: 3,
-                  pointRadius: 6,
-                },
-              ],
-              labels: years,
-            }} 
-          />;
+export function BarChart({
+  app, goals, web, years,
+}) {
+  return (
+    <Bar
+      options={options}
+      data={{
+        datasets: [
+          {
+            label: 'Goal',
+            data: goals,
+            borderColor: 'rgb(0,0,0, 0.8)',
+            backgroundColor: 'rgb(207,203,203, 0.3)',
+            pointRadius: 6,
+            borderWidth: {
+              left: 0,
+              right: 0,
+              top: 4,
+              bottom: 0,
+            },
+          },
+          {
+            label: 'Web',
+            data: app,
+            backgroundColor: 'rgb( 0 , 0 , 255, 0.3 )',
+            borderColor: 'rgb( 0 , 0 , 255, 0.7)',
+            borderWidth: 3,
+            pointRadius: 6,
+          },
+          {
+            label: 'App',
+            data: web,
+            backgroundColor: 'rgb( 185 , 0 , 255, 0.3 )',
+            borderColor: 'rgb( 185 , 0 , 255, 0.7)',
+            borderWidth: 3,
+            pointRadius: 6,
+          },
+        ],
+        labels: years,
+      }}
+    />
+  );
 }
