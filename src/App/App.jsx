@@ -11,7 +11,6 @@ import {
 } from '../Data/lineChartSales';
 import {
   app,
-  goals,
   web,
   labels as leadYears,
 } from '../Data/BarChartData';
@@ -45,7 +44,6 @@ function App() {
               />
               <BarChart
                 app={app}
-                goals={goals}
                 web={web}
                 years={leadYears}
                 className='barChart box'

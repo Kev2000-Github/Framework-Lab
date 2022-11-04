@@ -3,10 +3,12 @@ import { Bar } from 'react-chartjs-2';
 const options = {
   responsive: true,
   aspectRatio: 1,
+  interaction: {
+    intersect: false,
+  },
   scales: {
     y: {
-      max: 1000,
-      stacked: false,
+      stacked: true,
       grid: {
         display: false,
       },
@@ -37,7 +39,7 @@ const options = {
 };
 
 export function BarChart({
-  app, goals, web, years,
+  app, web, years,
   className,
 }) {
   return (
@@ -47,24 +49,11 @@ export function BarChart({
         data={{
           datasets: [
             {
-              label: 'Meta',
-              data: goals,
-              borderColor: 'rgb(0,0,0, 0.8)',
-              backgroundColor: 'rgb(207,203,203, 0.3)',
-              pointRadius: 6,
-              borderWidth: {
-                left: 0,
-                right: 0,
-                top: 4,
-                bottom: 0,
-              },
-            },
-            {
               label: 'Web',
               data: app,
               backgroundColor: 'rgb( 0 , 0 , 255, 0.3 )',
               borderColor: 'rgb( 0 , 0 , 255, 0.7)',
-              borderWidth: 3,
+              borderWidth: 2,
               pointRadius: 6,
             },
             {
@@ -72,7 +61,7 @@ export function BarChart({
               data: web,
               backgroundColor: 'rgb( 185 , 0 , 255, 0.3 )',
               borderColor: 'rgb( 185 , 0 , 255, 0.7)',
-              borderWidth: 3,
+              borderWidth: 2,
               pointRadius: 6,
             },
           ],
