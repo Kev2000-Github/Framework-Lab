@@ -16,10 +16,12 @@ import {
 } from '../Data/BarChartData';
 import { Table } from '../Components/Table';
 import { Lista } from '../Components/Menu/BarraLateral';
+import { NavBar } from '../Components/NavBar/Navbar';
 
 function App() {
   return (
     <div className='App'>
+      <NavBar />
       <main>
         <div className='grid grid-col-1 gap-2'>
           <div>

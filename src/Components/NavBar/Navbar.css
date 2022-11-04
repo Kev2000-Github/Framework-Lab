@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+:root {
+	--mainColor: #ffffff;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: rgb(6, 33, 185);
+}
+
+.headerNavBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    width: 100%;
+	padding: 0.5rem 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+}
+
+.headerNavBar .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+.headerNavBar div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.headerNavBar .rightBlock{
+    display: flex;
+}
+
+.headerNavBar .rightBlock > *{
+    margin-right: 20px;
+}
+
+.headerNavBar .rightBlock nav *{
+    padding: 0 1rem;
+	color: rgba(41, 40, 40, 0.671);
+	text-decoration: none;
+    border-left: 1px solid rgba(129, 128, 128, 0.199);
+    font-weight: 500;
+}
+
+.headerNavBar .rightBlock nav a{
+	color: rgb(0, 0, 0);
+}
+
+.headerNavBar .rightBlock .icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerNavBar .rightBlock .icons .topIcon{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.headerNavBar .rightBlock .icons .topIcon:hover{
+    fill: rgba(219, 87, 87, 0.685);
+}
+
+.headerNavBar .rightBlock nav a:hover{
+    color: rgba(219, 87, 87, 0.685);
+}
+
+.search-box{
+    background: #ffffff;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+.search-btn{
+    color: #000ed6;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+.search-txt{
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: rgb(0, 0, 0);
+ font-size: 16px;
+ line-height: 30px;
+ width: 300px;
+}
+
+.search-btn svg{
+    fill:rgba(41, 40, 40, 0.671);
+}
+
+.appsIcon{
+    width: 20px;
+    height: auto;
+}
+.notification{
+    width: 25px;
+    height: auto;
+}
