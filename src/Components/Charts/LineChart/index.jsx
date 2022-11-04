@@ -47,8 +47,8 @@ export function LineChart({
   return (
     <div className={`lineChart ${className}`}>
       <div className='lineHeader'>
-        <h1>Sales</h1>
-        <a href='#'>All sales</a>
+        <h1>Ventas</h1>
+        <a href='#'>Todas las ventas</a>
       </div>
       <div className='lineSubHeader'>
         <h1>
@@ -66,7 +66,7 @@ export function LineChart({
           $
           {numberFormatter(totalSales / dataReal.length | 0)}
           {' '}
-          avg sales
+          ventas promedio
         </p>
       </div>
       <div className='lineGraph'>

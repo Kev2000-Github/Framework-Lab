@@ -65,7 +65,10 @@ export function Table({ className }) {
   return (
     <div className={`flex flex-col ${className}`}>
       <div className='overflow-x-auto'>
-        <div className='flex justify-end py-3 pl-2'>
+        <div className='flex justify-between items-center py-3 pl-2'>
+          <h2 className='font-semibold text-2xl ml-2'>
+            Ventas
+          </h2>
           <div className='flex items-center space-x-2 relative mr-2'>
             <Search onSearch={handleSearch} />
           </div>

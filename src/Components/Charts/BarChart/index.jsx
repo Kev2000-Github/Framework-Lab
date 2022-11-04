@@ -1,5 +1,4 @@
 import { Bar } from 'react-chartjs-2';
-import './index.css';
 
 const options = {
   responsive: true,
@@ -42,13 +41,13 @@ export function BarChart({
   className,
 }) {
   return (
-    <div className={`barChart ${className}`}>
+    <div className={`${className} w-full h-auto p-3`}>
       <Bar
         options={options}
         data={{
           datasets: [
             {
-              label: 'Goal',
+              label: 'Meta',
               data: goals,
               borderColor: 'rgb(0,0,0, 0.8)',
               backgroundColor: 'rgb(207,203,203, 0.3)',

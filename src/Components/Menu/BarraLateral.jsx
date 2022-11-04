@@ -33,11 +33,11 @@ export function Lista({ className }) {
           </a>
         </li>
         <li>
-          <a href='#'>
+          <a href='#' className='selected'>
             <div className='icono'>
               <Grafica />
             </div>
-            Analytics
+            Analiticas
           </a>
         </li>
         <li>
@@ -45,7 +45,7 @@ export function Lista({ className }) {
             <div className='icono'>
               <Contacto />
             </div>
-            Contacts
+            Contactos
           </a>
         </li>
         <li>
@@ -53,7 +53,7 @@ export function Lista({ className }) {
             <div className='icono'>
               <Mail />
             </div>
-            Requests
+            Solicitudes
           </a>
         </li>
         <li>
@@ -61,7 +61,7 @@ export function Lista({ className }) {
             <div className='icono'>
               <Trabajo />
             </div>
-            Projects
+            Proyectos
           </a>
         </li>
         <li className='item' id='Documents'>
@@ -69,13 +69,13 @@ export function Lista({ className }) {
             <div className='icono'>
               <Documento />
             </div>
-            Documents
+            Documentos
             <ArrowDown className='arrowDown' />
           </a>
           <div className={`smenu ${isSubMenuOpen ? 'open' : ''}`}>
-            <a href='#'>Invoices</a>
-            <a href='#'>Extracts</a>
-            <a href='#'>Handbils</a>
+            <a href='#'>Facturas</a>
+            <a href='#'>Extractos</a>
+            <a href='#'>Volantes</a>
           </div>
         </li>
         <li>
@@ -83,7 +83,7 @@ export function Lista({ className }) {
             <div className='icono'>
               <Ajuste />
             </div>
-            Settings
+            Configuracion
           </a>
         </li>
       </ul>

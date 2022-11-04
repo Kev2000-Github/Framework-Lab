@@ -15,6 +15,7 @@
 	padding: 0.5rem 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
+    z-index: 1;
 }
 
 .headerNavBar .nav-btn {
@@ -98,11 +99,12 @@ nav {
  background: none;
  outline: none;
  float: left;
- padding: 0;
+ padding: 0 0 0 .5em;
  color: rgb(0, 0, 0);
  font-size: 16px;
  line-height: 30px;
  width: 300px;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.411);
 }
 
 .search-btn svg{

@@ -3,6 +3,18 @@ import { Doughnut } from 'react-chartjs-2';
 const options = {
   responsive: true,
   aspectRatio: 1,
+  plugins: {
+    legend: {
+      display: true,
+    },
+    title: {
+      display: true,
+      text: 'Ordenes',
+      font: {
+        size: 16,
+      },
+    },
+  },
 };
 
 const oilData = {
@@ -36,7 +48,7 @@ const oilData = {
 
 export function DoughnutChart({ className }) {
   return (
-    <div className={`${className} donutChart`}>
+    <div className={`${className} w-full h-auto p-3`}>
       <Doughnut
         data={oilData}
         options={options}

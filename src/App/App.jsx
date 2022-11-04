@@ -23,35 +23,37 @@ import { DoughnutChart } from '../Components/Charts/Donut';
 function App() {
   return (
     <div className='App'>
-      <NavBar className='topMenu' />
       <main className='mainPage'>
         <Lista className='sideMenu' />
-        <div className='dashboard'>
-          <div className='head'>
-            <h1>
-              Analíticas
-            </h1>
-            <Button className='btn-cvs' color='dark'>
-              Exportar como CVS
-            </Button>
+        <div className='rightBody'>
+          <NavBar className='topMenu' />
+          <div className='dashboard'>
+            <div className='head'>
+              <h1>
+                Analíticas
+              </h1>
+              <Button className='btn-cvs' color='dark'>
+                Exportar como CVS
+              </Button>
+            </div>
+            <div className='charts'>
+              <LineChart
+                dataProjection={dataProjection}
+                dataReal={dataReal}
+                years={saleYears}
+                className='lineChart box'
+              />
+              <BarChart
+                app={app}
+                goals={goals}
+                web={web}
+                years={leadYears}
+                className='barChart box'
+              />
+              <DoughnutChart className='box' />
+            </div>
+            <Table className='table box' />
           </div>
-          <div className='charts'>
-            <LineChart
-              dataProjection={dataProjection}
-              dataReal={dataReal}
-              years={saleYears}
-              className='lineChart box'
-            />
-            <BarChart
-              app={app}
-              goals={goals}
-              web={web}
-              years={leadYears}
-              className='barChart box'
-            />
-            <DoughnutChart className='box' />
-          </div>
-          <Table className='table box' />
         </div>
       </main>
     </div>
