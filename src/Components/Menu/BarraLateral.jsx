@@ -14,14 +14,14 @@ import { PerfilUsuario as Perfilfinal } from './MenuComponents/PerfilUsuario';
 import { Barra } from './MenuComponents/Barra';
 import { ArrowDown } from '../SVG/ArrowDown';
 
-export function Lista() {
+export function Lista({ className }) {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const subMenuOnClick = () => {
     setIsSubMenuOpen(!isSubMenuOpen);
   };
 
   return (
-    <div className='listado'>
+    <div className={`${className} listado`}>
       <Perfil />
       <ul>
         <li>

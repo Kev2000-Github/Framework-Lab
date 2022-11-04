@@ -21,26 +21,29 @@ import { NavBar } from '../Components/NavBar/Navbar';
 function App() {
   return (
     <div className='App'>
-      <NavBar />
-      <main>
-        <div className='grid grid-col-1 gap-2'>
-          <div>
-            <Lista />
+      <NavBar className='topMenu' />
+      <main className='mainPage'>
+        <Lista className='sideMenu' />
+        <div className='dashboard'>
+          <h1>
+            Analíticas
+          </h1>
+          <div className='charts'>
             <LineChart
               dataProjection={dataProjection}
               dataReal={dataReal}
               years={saleYears}
+              className='lineChart box'
             />
             <BarChart
               app={app}
               goals={goals}
               web={web}
               years={leadYears}
+              className='barChart box'
             />
           </div>
-          <div>
-            <Table />
-          </div>
+          <Table className='table box' />
         </div>
       </main>
     </div>

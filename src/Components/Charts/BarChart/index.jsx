@@ -1,9 +1,9 @@
 import { Bar } from 'react-chartjs-2';
+import './index.css';
 
 const options = {
   responsive: true,
-  aspectRatio: 1.3,
-  tension: 0.2,
+  aspectRatio: 1,
   scales: {
     y: {
       max: 1000,
@@ -39,44 +39,47 @@ const options = {
 
 export function BarChart({
   app, goals, web, years,
+  className,
 }) {
   return (
-    <Bar
-      options={options}
-      data={{
-        datasets: [
-          {
-            label: 'Goal',
-            data: goals,
-            borderColor: 'rgb(0,0,0, 0.8)',
-            backgroundColor: 'rgb(207,203,203, 0.3)',
-            pointRadius: 6,
-            borderWidth: {
-              left: 0,
-              right: 0,
-              top: 4,
-              bottom: 0,
+    <div className={`barChart ${className}`}>
+      <Bar
+        options={options}
+        data={{
+          datasets: [
+            {
+              label: 'Goal',
+              data: goals,
+              borderColor: 'rgb(0,0,0, 0.8)',
+              backgroundColor: 'rgb(207,203,203, 0.3)',
+              pointRadius: 6,
+              borderWidth: {
+                left: 0,
+                right: 0,
+                top: 4,
+                bottom: 0,
+              },
             },
-          },
-          {
-            label: 'Web',
-            data: app,
-            backgroundColor: 'rgb( 0 , 0 , 255, 0.3 )',
-            borderColor: 'rgb( 0 , 0 , 255, 0.7)',
-            borderWidth: 3,
-            pointRadius: 6,
-          },
-          {
-            label: 'App',
-            data: web,
-            backgroundColor: 'rgb( 185 , 0 , 255, 0.3 )',
-            borderColor: 'rgb( 185 , 0 , 255, 0.7)',
-            borderWidth: 3,
-            pointRadius: 6,
-          },
-        ],
-        labels: years,
-      }}
-    />
+            {
+              label: 'Web',
+              data: app,
+              backgroundColor: 'rgb( 0 , 0 , 255, 0.3 )',
+              borderColor: 'rgb( 0 , 0 , 255, 0.7)',
+              borderWidth: 3,
+              pointRadius: 6,
+            },
+            {
+              label: 'App',
+              data: web,
+              backgroundColor: 'rgb( 185 , 0 , 255, 0.3 )',
+              borderColor: 'rgb( 185 , 0 , 255, 0.7)',
+              borderWidth: 3,
+              pointRadius: 6,
+            },
+          ],
+          labels: years,
+        }}
+      />
+    </div>
   );
 }

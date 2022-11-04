@@ -20,7 +20,7 @@ const headers = [
 
 const staticSeeder = generateTableData(10);
 
-export function Table() {
+export function Table({ className }) {
   const [data, setData] = useState(staticSeeder);
   const [order, setOrder] = useState({ col: headers[0].name, order: 'DESC' });
 
@@ -63,7 +63,7 @@ export function Table() {
   };
 
   return (
-    <div className='flex flex-col'>
+    <div className={`flex flex-col ${className}`}>
       <div className='overflow-x-auto'>
         <div className='flex justify-end py-3 pl-2'>
           <div className='flex items-center space-x-2 relative mr-2'>

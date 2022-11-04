@@ -35,12 +35,17 @@ const getDiffPercent = (numbers) => {
   return (difference / originalNumber) * 100;
 };
 
-export function LineChart({ years = [], dataReal = [], dataProjection = [] }) {
+export function LineChart({
+  years = [],
+  dataReal = [],
+  dataProjection = [],
+  className = '',
+}) {
   const totalSales = dataReal.reduce((a, b) => a + b, 0);
   const diffPercent = getDiffPercent(dataReal);
   const isDecrease = diffPercent < 0;
   return (
-    <div className='lineChart'>
+    <div className={`lineChart ${className}`}>
       <div className='lineHeader'>
         <h1>Sales</h1>
         <a href='#'>All sales</a>

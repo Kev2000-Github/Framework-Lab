@@ -5,9 +5,9 @@ import {
   AppsIcon,
 } from '../SVG';
 
-export function NavBar() {
+export function NavBar({ className }) {
   return (
-    <header className='headerNavBar'>
+    <header className={`${className} headerNavBar`}>
       <div className='search-box'>
         <a className='search-btn' href='#'>
           <SearchIcon />
